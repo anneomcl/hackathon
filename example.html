@@ -6,20 +6,27 @@
     
     <body>
         <!-- Right below is an image of the sun -->
-        <img id="sun" src="http://goo.gl/dEEssP">
+        <img id="sun" src="http://solarsystem.nasa.gov/multimedia/gallery/PIA03149.jpg">
         
         <!-- Insert the 'earth' on the next line -->
 	<div id="earth-orbit">
-            <img id="earth" src="http://goo.gl/o3YWu9">
+            
       </div>
 	  
 
 	<script>
-	while(true){
 		var dataRef = new Firebase("https://glowing-fire-4366.firebaseio.com");
-		dataRef.set("I am now writing data into Firebase!");
+		var i=9;
+		
+		while(i<15){
+			dataRef.child("users").push("I am now"+i+ "data into Firebase!");
+			i++;
 		}
+		//window.location.search="hi_my_name_is_rev";
+		console.log(window.location.href.split("?")[1])
+		window.location.href = "page2.html?fjdksjfkldsjfklsdjfdsk"
 	</script>
+
 	
     </body>
 </html>
