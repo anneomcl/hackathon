@@ -1,7 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css" />
-		<script src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
+		<script src="https://cdn.firebase.com/v0/firebase.js"></script>
     </head>
     
     <body>
@@ -13,15 +13,13 @@
             <img id="earth" src="http://goo.gl/o3YWu9">
       </div>
 	  
-	  <script type="text/javascript">
-	alert("Welcome to my world!!!");
-	</script>
-        
+
 	<script>
-		document.write("Welcome to my world!!!");
-		if (confirm("Do you agree")) {
-		alert("You agree");}
-		else{alert ("You do not agree")};
+	while(true){
+		var dataRef = new Firebase("https://glowing-fire-4366.firebaseio.com");
+		dataRef.set("I am now writing data into Firebase!");
+		}
 	</script>
+	
     </body>
 </html>
